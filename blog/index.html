@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
     />
-    <title>Homepage</title>
+    <title>Blog</title>
     <!-- Link Font -->
     <link
       rel="stylesheet"
@@ -22,7 +22,7 @@
     <!-- script jquery -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <!-- Link css -->
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/blog/style.css" />
   </head>
 
   <body>
@@ -91,7 +91,9 @@
         </div>
       </div>
     </nav>
+    <!-- navbar -->
 
+    <!-- title page -->
     <div class="container p-4">
       <p class="heading-one">Blog</p>
       <p class="heading-two">
@@ -99,15 +101,100 @@
         focused.
       </p>
     </div>
+    <!-- title page -->
 
+    <!-- show card -->
     <div class="container">
       <div class="row" id="card-container"></div>
     </div>
+    <!-- show card -->
 
-    <!-- Skrip JavaScript untuk membuat kartu-kartu -->
+    <!-- button pagination -->
+    <div
+      class="d-flex justify-content-center"
+      style="padding-bottom: 200px; padding-top: 100px"
+    >
+      <div class="previous-page">
+        <button
+          class="btn btn-lg me-2"
+          style="background-color: rgba(84, 104, 231, 0.5)"
+        >
+          Prev
+        </button>
+      </div>
+      <div class="next-page">
+        <button
+          class="btn btn-lg me-2"
+          style="background-color: rgba(84, 104, 231, 0.5)"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+    <!-- button pagination -->
+
+    <!-- footer -->
+    <footer>
+      <div class="container p-3">
+        <div class="row p-3">
+          <div class="col-sm-12 col-lg-4 order-sm-1">
+            <img
+              src="/assets/logo.png"
+              alt="Logo"
+              style="width: 138px; height: 52px"
+            />
+            <div class="col-lg-7">
+              <p style="padding-top: 25px">
+                Collaboration platform for mordern team
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-8 col-lg-2 order-sm-5">
+            <h4>Stay up to date</h4>
+            <p>Subscribe to our newseller</p>
+            <div class="input-group input-group-lg">
+              <input
+                type="email"
+                class="form-control email-footer"
+                id="InputEmailfooter"
+                placeholder="Email"
+              />
+              <div class="input-group-append">
+                <a href="#"><img src="/assets/arrowinputfooter.png" /></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 col-lg-2 order-sm-2">
+            <h4>Company</h4>
+            <p>Product</p>
+            <p>Blog</p>
+            <p>Support</p>
+          </div>
+          <div class="col-sm-4 col-lg-2 order-sm-3">
+            <h4>Features</h4>
+            <p>Screen Sharing</p>
+            <p>IQS & Android Apps</p>
+            <p>File Sharing</p>
+            <p>User Managment</p>
+          </div>
+          <div class="col-sm-4 col-lg-2 order-sm-4">
+            <h4>Contact us</h4>
+            <p>info@teamapp.com</p>
+            <p>1-800-200-300</p>
+            <p>1010 Sunset Blv. Palo Alto, California</p>
+          </div>
+          <div class="col-sm-12 order-sm-5" style="padding-top: 10%">
+            <p>© Copyright Team Inc.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer -->
+
+    <!-- script show card -->
     <script>
       $(document).ready(function () {
-        // Data dinamis untuk setiap kartu
+        // add card data
         var cardData = [
           {
             title: "Data exported by Team Cloud organization",
@@ -188,7 +275,7 @@
           },
         ];
 
-        // Loop untuk membuat kartu-kartu
+        // loop card sebanyak cardData
         for (var i = 0; i < cardData.length; i++) {
           var cardHtml = `
           <div class="card-grid col-lg-4 col-12 d-flex justify-content-center">
@@ -206,7 +293,7 @@
                 <h5 class="card-text">${cardData[i].text}</h5>
               </div>
               <div
-                class="container d-flex border align-items-center"
+                class="container d-flex align-items-center"
                 style="padding: 20px"
               >
                 <img
@@ -214,19 +301,12 @@
                   alt="card image"
                   style="width: 48px; height: 48px"
                 />
-                <div class="d-flex" style="height: 35px">
-                  <div
-                    style="
-                      border-right: 2px solid #7676b2;
-                      padding-right: 10px;
-                      padding-left: 10px;
-                      padding-top: 5px;
-                    "
-                  >
-                    <p style="color: #7676b2">Guy Huksin</p>
+                <div class="d-flex grup-writer">
+                  <div class="writer-blog">
+                    <p>Guy Hawkins</p>
                   </div>
-                  <div style="padding-left: 10px; padding-top: 5px">
-                    <p style="color: #7676b2">September 29, 2003</p>
+                  <div class="date-blog">
+                    <p>September 29, 2003</p>
                   </div>
                 </div>
               </div>
@@ -234,140 +314,54 @@
           </div>
           `;
 
-          // Menambahkan kartu ke dalam container
+          // add card ke card container
           $("#card-container").append(cardHtml);
         }
       });
     </script>
-
-    <div
-      class="d-flex justify-content-center"
-      style="padding-bottom: 200px; padding-top: 100px"
-    >
-      <div class="previous-page">
-        <button
-          class="btn btn-lg me-2"
-          style="background-color: rgba(84, 104, 231, 0.5)"
-        >
-          Prev
-        </button>
-      </div>
-      <div class="next-page">
-        <button
-          class="btn btn-lg me-2"
-          style="background-color: rgba(84, 104, 231, 0.5)"
-        >
-          Next
-        </button>
-      </div>
-    </div>
-
-    <!-- footer -->
-    <footer>
-      <div class="container p-3">
-        <div class="row p-3">
-          <div class="col-sm-12 col-lg-4 order-sm-1">
-            <img
-              src="/assets/logo.png"
-              alt="Logo"
-              style="width: 138px; height: 52px"
-            />
-            <div class="col-lg-7">
-              <p style="padding-top: 25px">
-                Collaboration platform for mordern team
-              </p>
-            </div>
-          </div>
-          <div class="col-sm-8 col-lg-2 order-sm-5">
-            <h4>Stay up to date</h4>
-            <p>Subscribe to our newseller</p>
-            <div class="input-group input-group-lg">
-              <input
-                type="email"
-                class="form-control email-footer"
-                id="InputEmailfooter"
-                placeholder="Email"
-              />
-              <div class="input-group-append">
-                <a href="#"><img src="/assets/arrowinputfooter.png" /></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4 col-lg-2 order-sm-2">
-            <h4>Company</h4>
-            <p>Product</p>
-            <p>Blog</p>
-            <p>Support</p>
-          </div>
-          <div class="col-sm-4 col-lg-2 order-sm-3">
-            <h4>Features</h4>
-            <p>Screen Sharing</p>
-            <p>IQS & Android Apps</p>
-            <p>File Sharing</p>
-            <p>User Managment</p>
-          </div>
-          <div class="col-sm-4 col-lg-2 order-sm-4">
-            <h4>Contact us</h4>
-            <p>info@teamapp.com</p>
-            <p>1-800-200-300</p>
-            <p>1010 Sunset Blv. Palo Alto, California</p>
-          </div>
-          <div class="col-sm-12 order-sm-5" style="padding-top: 10%">
-            <p>© Copyright Team Inc.</p>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- footer -->
-
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
       $(document).ready(function () {
         var cardgrid = $(".card-grid");
-        var cards = $(".card"); // Memilih semua elemen dengan class card-grid
-        var cardsPerPage = 9; // Menentukan jumlah kartu yang akan ditampilkan per halaman
-        var currentPage = 1; // Halaman yang sedang ditampilkan
+        var cards = $(".card"); 
+        var cardsPerPage = 9; 
+        var currentPage = 1; 
 
         // Fungsi untuk menampilkan kartu pada halaman tertentu
         function showPage(page) {
-          var startIndex = (page - 1) * cardsPerPage; // Indeks awal kartu pada halaman tertentu
-          var endIndex = startIndex + cardsPerPage; // Indeks akhir kartu pada halaman tertentu
+          var startIndex = (page - 1) * cardsPerPage; 
+          var endIndex = startIndex + cardsPerPage; 
 
-          // Menyembunyikan semua kartu
           cards.hide();
           cardgrid.hide();
 
-          // Menampilkan kartu pada halaman tertentu
           cards.slice(startIndex, endIndex).show();
           cardgrid.slice(startIndex, endIndex).show();
 
-          // Memeriksa apakah masih ada kartu yang belum ditampilkan
+          // check if halaman pertama
+          if (page === 1) {
+            $(".previous-page").hide(); 
+          } else {
+            $(".previous-page").show(); 
+          }
+
+          // check if masih ada halaman selanjutnya
           var remainingCards = cards.length - endIndex;
           if (remainingCards <= 0) {
-            $(".next-page").hide(); // Sembunyikan tombol "next"
+            $(".next-page").hide(); 
           } else {
-            $(".next-page").show(); // Tampilkan tombol "next"
+            $(".next-page").show(); 
           }
 
-          // Memeriksa apakah berada di halaman pertama
-          if (page === 1) {
-            $(".previous-page").hide(); // Sembunyikan tombol "prev"
-          } else {
-            $(".previous-page").show(); // Tampilkan tombol "prev"
-          }
         }
 
-        // Inisialisasi: Menampilkan halaman pertama
         showPage(currentPage);
 
-        // Handler untuk tombol "next"
         $(".next-page").on("click", function (e) {
           e.preventDefault();
           currentPage++;
           showPage(currentPage);
         });
 
-        // Handler untuk tombol "prev"
         $(".previous-page").on("click", function (e) {
           e.preventDefault();
           if (currentPage > 1) {
@@ -377,7 +371,9 @@
         });
       });
     </script>
+     <!-- script show card -->
 
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

@@ -7,7 +7,6 @@ body {
   background: rgba(84, 104, 231, 0.5);
 }
 
-/* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 280px) {
   footer {
     background-color: #232340;
@@ -23,9 +22,27 @@ body {
     padding-top: 23px;
     padding-bottom: 16px;
   }
+
+  .grup-writer{
+    color: #7676b2;
+    height: 40px;
+  }
+
+  .writer-blog {
+    border-right: 2px solid #7676b2;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 0px;
+
+  }
+
+  .date-blog {
+    padding-left: 10px;
+    padding-top: 0px;
+
+  }
 }
 
-/* // Medium devices (tablets, 768px and up) */
 @media (min-width: 568px) {
   footer {
     background-color: #232340;
@@ -67,16 +84,37 @@ body {
     color: #232340;
     padding-bottom: 10px;
   }
+
+  .writer-blog {
+    border-right: 2px solid #7676b2;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 6px;
+  }
+  
+  .date-blog {
+    padding-left: 10px;
+    padding-top: 6px;
+  }
 }
 
-/* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-}
-
-/* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .item-footer {
     padding-bottom: 15px;
+  }
+
+  .writer-blog {
+    border-right: 2px solid #7676b2;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 0px;
+
+  }
+
+  .date-blog {
+    padding-left: 10px;
+    padding-top: 0px;
+
   }
 
   footer {
@@ -101,10 +139,18 @@ body {
   }
 }
 
-/* // X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-}
-
-/* // XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
+  .writer-blog {
+    border-right: 2px solid #7676b2;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 6px;
+
+  }
+
+  .date-blog {
+    padding-left: 10px;
+    padding-top: 6px;
+
+  }
 }

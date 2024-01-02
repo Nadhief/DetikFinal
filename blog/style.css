@@ -7,6 +7,14 @@ body {
   background: rgba(84, 104, 231, 0.5);
 }
 
+.heading-one {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 64px;
+  color: #232340;
+  padding-bottom: 10px;
+}
+
 @media (min-width: 280px) {
   footer {
     background-color: #232340;
@@ -67,22 +75,6 @@ body {
 
   #InputEmailfooter::placeholder {
     color: #f5f5f5;
-  }
-
-  .heading-one {
-    font-size: 50px;
-    font-weight: bold;
-    line-height: 64px;
-    color: #232340;
-    padding-bottom: 10px;
-  }
-
-  .heading-one {
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 23px;
-    color: #232340;
-    padding-bottom: 10px;
   }
 
   .writer-blog {
